@@ -8,9 +8,9 @@
     --colours-dark-grey: #3c3c3c;
     --colours-light-grey: #c2c2c2;
     --colours-alert-orange: #e26b46;
-    --colours-hero-blue: #010F3D;
-    --colours-white: #FFFFFF;
-    --colours-white-alpha-75: #ffffffBF;
+    --colours-hero-blue: #010f3d;
+    --colours-white: #ffffff;
+    --colours-white-alpha-75: #ffffffbf;
 
     /* Typography */
     --typography-family-poppins: "Poppins", sans-serif;
@@ -62,15 +62,25 @@ h6 {
     color: var(--colours-primary-blue);
 }
 
+h1 {
+    font-size: clamp(
+        var(--typography-size-xl),
+        3vw,
+        var(--typography-size-2xl)
+    );
+}
+
 p {
     font-weight: var(--typography-weight-regular);
+    color: var(--colours-dark-grey);
+    line-height: 1.875rem;
 }
 
 /*============ LAYOUT ============*/
 
 .container {
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 2rem;
     max-width: 79rem;
 }
 
@@ -109,7 +119,8 @@ p {
 
 @media screen and (min-width: 768px) {
     header {
-        margin-bottom: 4rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
     }
 
     .main-nav {
@@ -165,8 +176,9 @@ footer {
 .footer-nav__list {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
     margin-bottom: 2rem;
+    font-size: var(--typography-size-sm);
 }
 
 .copyright-notice {
@@ -183,6 +195,8 @@ footer {
 
     .footer-nav__list {
         margin-bottom: 0;
+        gap: 1.5rem;
+        font-size: var(--typography-size-md);
     }
 
     .copyright-notice {
