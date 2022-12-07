@@ -1,0 +1,13 @@
+/* global styles here (header, footer) */
+
+/*============ VARIABLES ============*/
+
+:root {
+    --colors-primary-blue: #15495C;
+}
+
+/*============ TYPOGRAPHY ============*/
+
+body {
+    font-family: "Poppins", sans-serif;
+}
