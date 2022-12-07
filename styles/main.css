@@ -1,1 +1,35 @@
-/* home page */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-image: url("../assets/images/dream-bucket-hero.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.hero__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: var(--typography-weight-bold);
+}
+
+.hero__text-dream {
+    font-size: 4rem;
+    font-style: italic;
+    color: var(--colours-hero-blue);
+}
+
+.hero__text-big {
+    font-size: 7.5rem;
+    color: var(--colours-white-alpha-75);
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+    .hero__title {
+        flex-direction: row;
+    }
+}

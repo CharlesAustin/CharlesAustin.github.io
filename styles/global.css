@@ -8,11 +8,15 @@
     --colours-dark-grey: #3c3c3c;
     --colours-light-grey: #c2c2c2;
     --colours-alert-orange: #e26b46;
+    --colours-hero-blue: #010F3D;
+    --colours-white: #FFFFFF;
+    --colours-white-alpha-75: #ffffffBF;
 
     /* Typography */
     --typography-family-poppins: "Poppins", sans-serif;
-    --typography-weight-header: 600;
-    --typography-weight-paragraph: 400;
+    --typography-weight-regular: 400;
+    --typography-weight-semibold: 600;
+    --typography-weight-bold: 700;
     --typography-size-xs: 0.75rem;
     --typography-size-sm: 0.875rem;
     --typography-size-md: 1rem;
@@ -54,12 +58,12 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: var(--typography-weight-header);
+    font-weight: var(--typography-weight-semibold);
     color: var(--colours-primary-blue);
 }
 
 p {
-    font-weight: var(--typography-weight-paragraph);
+    font-weight: var(--typography-weight-regular);
 }
 
 /*============ LAYOUT ============*/
