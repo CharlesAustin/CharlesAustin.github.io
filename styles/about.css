@@ -73,6 +73,12 @@
 
     .about-grid {
         gap: 2rem;
+        margin: 4rem auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .about-grid {
         margin: 0 auto;
     }
 }
