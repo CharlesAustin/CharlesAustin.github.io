@@ -1,1 +1,77 @@
-/* About Page */
+/*============ ABOUT ============*/
+
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+    .about {
+        flex-direction: row;
+        gap: 6rem;
+    }
+}
+
+/*============ PARTNERS ============*/
+
+.partners {
+    flex-basis: 50%;
+}
+
+.partners__title {
+    margin-top: 0;
+}
+
+.partners__list-item {
+    margin-bottom: 3rem;
+}
+
+/*============ IMAGE GRID ============*/
+
+.about-grid {
+    margin: 4rem 0;
+    display: grid;
+    box-sizing: border-box;
+    grid-template-columns: repeat(auto-fit, minmax(0, 313px));
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "tent sharks"
+        "iceberg sharks"
+        "iceberg aurora";
+    gap: 1rem;
+    justify-content: center;
+}
+
+.about-grid__item--tent {
+    grid-area: tent;
+}
+
+.about-grid__item--iceberg {
+    grid-area: iceberg;
+}
+
+.about-grid__item--sharks {
+    grid-area: sharks;
+}
+
+.about-grid__item--aurora {
+    grid-area: aurora;
+}
+
+.about-grid__img {
+    max-inline-size: 100%;
+    height: 100%;
+    border-radius: var(--border-radius-5);
+    object-fit: cover;
+}
+
+@media screen and (min-width: 768px) {
+    .about {
+        align-items: flex-start;
+    }
+
+    .about-grid {
+        gap: 3rem;
+        margin: 0 auto;
+    }
+}
