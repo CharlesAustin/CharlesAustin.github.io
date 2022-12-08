@@ -11,6 +11,8 @@
     --colours-hero-blue: #010f3d;
     --colours-white: #ffffff;
     --colours-white-alpha-75: #ffffffbf;
+    --colours-black-alpha-25: #00000040;
+    --colours-black-alpha-10: #0000001A;
 
     /* Typography */
     --typography-family-poppins: "Poppins", sans-serif;
@@ -23,6 +25,13 @@
     --typography-size-lg: 1.25rem;
     --typography-size-xl: 1.5rem;
     --typography-size-2xl: 2.25rem;
+    --typography-size-3xl: 3rem;
+    --typography-text-shadow:  0px 6px 8px var(--colours-dark-grey);
+
+    /* Utility */
+    --border-radius-10: 10px;
+    --box-shadow-light: 0px 4px 8px var(--colours-black-alpha-10);
+    --box-shadow-medium: 0px 4px 4px var(--colours-black-alpha-25); 
 }
 
 /*============ GLOBALS ============*/
@@ -74,6 +83,7 @@ p {
     font-weight: var(--typography-weight-regular);
     color: var(--colours-dark-grey);
     line-height: 1.875rem;
+    margin: 0;
 }
 
 /*============ LAYOUT ============*/
@@ -105,6 +115,7 @@ p {
     display: flex;
     flex-direction: column;
     font-size: var(--typography-size-xl);
+    margin-bottom: 2rem;
 }
 
 .main-nav__list-item-link {
@@ -131,6 +142,7 @@ p {
     .main-nav__list {
         flex-direction: row;
         margin-top: 2.55rem;
+        margin-bottom: 0;
         align-items: center;
         gap: 1.5rem;
     }

@@ -17,6 +17,22 @@
     align-items: center;
     font-weight: var(--typography-weight-bold);
     line-height: 1;
+    animation-fill-mode: backwards;
+    animation-delay: 200ms;
+    animation-duration: 5000ms;
+    animation-name: dream-slide;
+}
+
+@keyframes dream-slide {
+    from {
+        margin-bottom: 8rem;
+        opacity: 0;
+    }
+    
+    to {
+        margin-bottom: 0;
+        opacity: 100;
+    }
 }
 
 .hero__text-dream {
@@ -37,10 +53,10 @@
     }
 }
 
-/*============ INTRO TEXT ============*/
+/*============ INTRO TEXT SECTION ============*/
 
 .intro-text {
-    margin: 3.5rem 0;
+    margin: 4.5rem 0;
 }
 
 .intro-text__body {
@@ -50,5 +66,276 @@
 @media screen and (min-width: 768px) {
     .intro-text {
         text-align: center;
+    }
+}
+
+/*============ FEATURE TILES ============*/
+
+.feature-tiles {
+    margin-bottom: 5rem;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.col-3 {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: var(--border-radius-10);
+    transition: 200ms all ease-in-out;
+}
+
+.col-3:hover {
+    scale: 1.05;
+    box-shadow: var(--box-shadow-medium);
+}
+
+.feature-tile-title {
+    position: absolute;
+    top: calc(50% - (var(--typography-size-2xl) / 2));
+    line-height: 1;
+    font-weight: var(--typography-weight-bold);
+    font-size: var(--typography-size-2xl);
+    color: var(--colours-white);
+    text-transform: uppercase;
+    text-shadow: var(--typography-text-shadow);
+}
+
+.feature-tile-img {
+    max-inline-size: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius-10);
+}
+
+@media screen and (min-width: 480px) {
+    .feature-tile-title {
+        font-size: var(--typography-size-3xl);
+        top: calc(50% - (var(--typography-size-3xl) / 2));
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .col-3 {
+        flex: 1 1 calc(33.33% - 2rem);
+        max-width: 363px;
+    }
+
+    .feature-tile-title {
+        font-size: var(--typography-size-2xl);
+        top: calc(50% - (var(--typography-size-2xl) / 2));
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .feature-tile-title {
+        font-size: var(--typography-size-3xl);
+        top: calc(50% - (var(--typography-size-3xl) / 2));
+    }
+}
+
+/*============ DOWNLOAD CTA ============*/
+
+.download-cta {
+    background-color: var(--colours-secondary-blue-alpha-40);
+    padding-bottom: 4rem;
+}
+
+.download-cta__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.download-cta__text {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.download-cta__title {
+    font-size: var(--typography-size-xl);
+}
+
+.download-cta__body-copy {
+    font-size: var(--typography-size-lg);
+}
+
+.download-cta__badges {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.download-cta__img {
+    max-inline-size: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 1024px) {
+    .download-cta {
+        padding-bottom: 0;
+    }
+    .download-cta__content {
+        flex-direction: row;
+    }
+
+    .download-cta__text {
+        text-align: left;
+        flex-basis: 50%;
+        padding: 0 1rem;
+    }
+}
+
+/*============ NEWS & TESTIMONIALS SECTION ============*/
+
+.news-testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5rem 0;
+    gap: 2rem;
+}
+
+@media screen and (min-width: 1300px) {
+    .news-testimonials {
+        flex-direction: row;
+        gap: 8rem;
+    }
+}
+
+/*============ LATEST NEWS ============*/
+
+.latest-news {
+    max-width: 60ch;
+    margin: 0 auto;
+}
+
+.latest-news__title {
+    font-size: var(--typography-size-2xl);
+    margin-top: 0;
+    text-align: center;
+}
+
+.news-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--colours-light-grey);
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.date-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--colours-primary-blue);
+    padding: 0.3815rem 1.271rem;
+    border-radius: var(--border-radius-10);
+    color: var(--colours-white);
+    box-shadow: var(--box-shadow-medium);
+}
+
+.date-badge__day {
+    font-size: 2.125rem;
+    font-weight: var(--typography-weight-bold);
+    line-height: 2rem;
+}
+
+.news-item__title {
+    font-size: var(--typography-size-lg);
+    margin: 0;
+    padding-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .latest-news {
+        align-items: flex-start;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .latest-news__title {
+        text-align: left;
+    }
+}
+
+/*============ TESTIMONIALS GRID ============*/
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 236px);
+    justify-content: center;
+    align-content: flex-start;
+    gap: 1.188rem;
+}
+
+.testimonials-grid__title {
+    font-size: var(--typography-size-2xl);
+    margin-top: 0;
+    text-align: center;
+}
+
+.testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid var(--colours-light-grey);
+    border-radius: var(--border-radius-10);
+    aspect-ratio: 1/1;
+    transition: 200ms all ease-in-out;
+}
+
+.testimonial:hover {
+    scale: 1.05;
+    box-shadow: var(--box-shadow-light);
+}
+
+.testimonial__name {
+    font-size: var(--typography-size-xs);
+    line-height: 1.125rem;
+}
+
+.testimonial__stars {
+    margin-top: 0.688rem;
+    margin-bottom: 0.813rem;
+}
+
+.testimonial__text {
+    font-size: var(--typography-size-sm);
+    line-height: 1.125rem;
+    letter-spacing: 0.16px;
+    max-width: 76%;
+}
+
+.testimonials__img {
+    margin-bottom: 0.188rem;
+}
+
+@media screen and (min-width: 560px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 236px);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .testimonials-grid {
+        grid-template-columns: repeat(3, 236px);
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .testimonials-grid__title {
+        text-align: left;
     }
 }
