@@ -72,6 +72,10 @@
     border: 1px solid var(--colours-light-grey-alpha-50);
 }
 
+.form__textarea {
+    resize: none;
+}
+
 .form__submit-button {
     font-size: var(--typography-size-sm);
     font-weight: var(--typography-weight-semibold);
